@@ -25,7 +25,6 @@ class App extends Component {
         `https://api.tvmaze.com/search/shows?q=${this.state.term}`
       );
       this.setState({ shows: res.data });
-      console.log(this.state.term);
     } catch (error) {
       console.log(`Error: ${error}`);
     }
