@@ -6,7 +6,7 @@ const ShowList = ({ shows }) => {
     <div>
       {shows.map((show) => {
         return (
-          <Link to="info" key={show.show.id}>
+          <Link to="info" key={show.show.id} state={{ show }}>
             <img src={show.show.image.medium} />{" "}
           </Link>
         );
