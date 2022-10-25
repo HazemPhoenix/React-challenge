@@ -12,10 +12,10 @@ const InfoPage = () => {
       <img src={image.medium} alt={show.show.name} />
       <h1>Title: {name}</h1>
       <h2>Language: {language}</h2>
-      <h2>Genres: {genres.join(",")}</h2>
+      <h2>Genres: {genres.join(", ")}</h2>
       <h2>Status: {status}</h2>
-      <h2>Release Date: {premiered}</h2>
-      <h2>Finishing Date: {ended}</h2>
+      <h2>First Aired: {premiered}</h2>
+      <h2>Finished Airing: {ended}</h2>
       <h2>Rating: {rating.average}</h2>
     </div>
   );
