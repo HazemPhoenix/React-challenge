@@ -1,15 +1,24 @@
-import React from 'react';
-import Card from '../components/Card';
-import dummyData from "../dummyData.json"; // To be replaced with your api response data
+import React from "react";
+import Search from "../components/Search";
+import ShowList from "./ShowList";
+require("regenerator-runtime/runtime");
 
+export const Home = (props) => {
+  const { onSubmit, onChange, value, shows } = props;
 
-export const Home = () => {
   return (
     <>
-      <h1>Space X Ships</h1>
-      <div className="App" style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr", rowGap: "10px", columnGap: "20px"}}>
-        <Card image={dummyData.image} name={dummyData.name} home_port={dummyData.home_port} roles={dummyData.roles} />
-      </div>
+      <Search onSubmit={onSubmit} onChange={onChange} value={value} />
+      <ShowList shows={shows} />
+      <div
+        className="App"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          rowGap: "10px",
+          columnGap: "20px",
+        }}
+      ></div>
     </>
   );
 };
