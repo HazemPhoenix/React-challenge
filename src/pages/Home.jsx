@@ -1,6 +1,7 @@
 import React from "react";
-import Search from "./Search";
-import ShowList from "./ShowList";
+import Search from "../components/Search";
+import ShowList from "../components/ShowList";
+
 require("regenerator-runtime/runtime");
 
 export const Home = (props) => {
